@@ -4,6 +4,8 @@ on:
     branches:
       - main
     pull_request:
+  schedule:
+    - cron: '32 6 * * 0'
 jobs:
   docker:
     runs-on: ubuntu-latest
