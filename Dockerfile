@@ -10,4 +10,4 @@ USER tg-archive
 RUN virtualenv /home/tg-archive && \
     source /home/tg-archive/bin/activate && \
     pip-3 install --no-cache-dir --quiet PyYAML==6.0 && \
-    pip-3 install --no-cache-dir --quiet tg-archive==0.3.9
+    pip-3 install --no-cache-dir --quiet tg-archive==0.3.10
