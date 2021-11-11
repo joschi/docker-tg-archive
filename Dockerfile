@@ -1,4 +1,4 @@
-FROM redhat/ubi8-minimal:8.4
+FROM redhat/ubi8-minimal:8.5
 RUN microdnf module enable -y python39 && \
     microdnf install -y --nodocs shadow-utils python39 python39-pip python39-setuptools python39-pip-wheel && \
     microdnf clean all && \
