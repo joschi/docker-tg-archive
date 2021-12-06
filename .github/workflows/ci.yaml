@@ -4,6 +4,7 @@ on:
     branches:
       - main
     pull_request:
+      - main
   schedule:
     - cron: '32 6 * * 0'
 jobs:
