@@ -1,1 +1,1 @@
-tg-archive==0.5.3
+tg-archive==0.5.4
