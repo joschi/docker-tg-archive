@@ -1,6 +1,5 @@
-FROM redhat/ubi8-minimal:8.6
-COPY requirements.txt .
-RUN microdnf module enable -y python39 && \
-    microdnf install -y --nodocs python39 python39-pip python39-pyyaml && \
+FROM redhat/ubi9-minimal:9.0.0
+RUN microdnf install -y --nodocs python3 python3-pip && \
     microdnf clean all && \
-    pip-3 install --no-cache-dir -r requirements.txt
+    pip-3 install --no-cache-dir 'PyYAML>=5.4.1' && \
+    pip-3 install --no-cache-dir 'tg-archive==0.5.5'
