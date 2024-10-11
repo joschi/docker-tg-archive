@@ -25,6 +25,13 @@ jobs:
         with:
           image: joschi/tg-archive:${{ github.sha }}
           fail-build: false
+          output-format: table
+        env:
+          GRYPE_FILE: vuln-report.out
+      - name: Attach Anchore build scan summary
+        run: |
+          VULN_REPORT="$(cat vuln-report.out)"
+          printf "# Vulnerability Report Summary\n<pre>$VULN_REPORT</pre>" > $GITHUB_STEP_SUMMARY
       - name: Set output
         id: vars
         run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
