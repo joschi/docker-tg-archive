@@ -1,4 +1,4 @@
-FROM redhat/ubi9-minimal:9.6-1754356396@sha256:295f920819a6d05551a1ed50a6c71cb39416a362df12fa0cd149bc8babafccff
+FROM redhat/ubi9-minimal:9.6-1754456323@sha256:e6b39b0a2cd88c0d904552eee0dca461bc74fe86fda3648ca4f8150913c79d0f
 RUN microdnf install -y --nodocs python3 python3-pip && \
     microdnf clean all && \
     pip-3 install --no-cache-dir 'tg-archive==1.3.0'
